@@ -1,0 +1,9 @@
+project: savantenvs/cuVSLAM
+target: odometry-multicamera
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/odometry-multicamera/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_odometry_multicamera
+    libfuzzer: true
+    timeout: 10

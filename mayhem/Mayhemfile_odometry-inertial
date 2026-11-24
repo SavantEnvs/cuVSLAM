@@ -1,0 +1,9 @@
+project: savantenvs/cuVSLAM
+target: odometry-inertial
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/odometry-inertial/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_odometry_inertial
+    libfuzzer: true
+    timeout: 10

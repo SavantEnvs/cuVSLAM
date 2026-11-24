@@ -1,0 +1,9 @@
+project: savantenvs/cuVSLAM
+target: rig-replay
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rig-replay/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rig_replay
+    libfuzzer: true
+    timeout: 10

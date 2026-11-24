@@ -1,0 +1,9 @@
+project: savantenvs/cuVSLAM
+target: edex-read
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/edex-read/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_edex_read
+    libfuzzer: true
+    timeout: 10

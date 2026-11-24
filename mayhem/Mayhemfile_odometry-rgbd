@@ -1,0 +1,9 @@
+project: savantenvs/cuVSLAM
+target: odometry-rgbd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/odometry-rgbd/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_odometry_rgbd
+    libfuzzer: true
+    timeout: 10

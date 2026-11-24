@@ -1,0 +1,9 @@
+project: savantenvs/cuVSLAM
+target: map-load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/map-load/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_map_load
+    libfuzzer: true
+    timeout: 10
